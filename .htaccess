@@ -1,0 +1,30 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+
+# Redirect "terms-and-conditions" without ".html"
+RewriteRule ^terms-and-conditions/?$ /terms-and-conditions.html [L]
+
+# Redirect "privacy-policy" without ".html"
+RewriteRule ^privacy-policy/?$ /privacy-policy.html [L]
+
+# Redirect "index" without ".htm"
+RewriteRule ^index/?$ /index.htm [L]
+
+# Redirect "concord-city-nc" without ".html"
+RewriteRule ^concord-city-nc/?$ /concord-city-nc.html [L]
+
+# Redirect "about-us" without ".html"
+RewriteRule ^about-us/?$ /about-us.html [L]
+
+# Redirect "contact-us" without ".html"
+RewriteRule ^contact-us/?$ /contact-us.html [L]
+
+# Disable directory browsing
+Options -Indexes
+
+# Protect .htaccess
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
